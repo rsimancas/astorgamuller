@@ -1,0 +1,11 @@
+SQL Server 2012 Feature Pack Instructions:
+
+The links to the SQL Server 2012 Feature Pack components can be found in the 
+“INSTRUCTIONS” section on the SQL Server 2012 Feature Pack page. 
+
+ - The “INSTRUCTIONS” section can be found about half way down the SQL 
+Server 2012 Feature Pack page.
+
+- Once you navigate to the section please be certain to pick the 
+appropriate component architecture for download. 
+ 

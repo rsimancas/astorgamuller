@@ -1011,34 +1011,9 @@ namespace MullerWA.Models
                 }
             }
 
-            //string sql = "SELECT * FROM ( " +
-            //             "SELECT a.*, dbo.fn_MovCiudades(a.MovId,c.CiudadCodigo) as x_Ciudad, " +
-            //             "  d.EstatusNombre as x_Estatus, d.EstatusOrden as x_EstatusOrden, " +
-            //             "  ISNULL(e.ExpNumBL,'') as x_ExpNumBL, " +
-            //             "  dbo.fn_MovClientes(a.MovId,b.ClienteNombre) as x_Cliente, " +
-            //             "  ROW_NUMBER() OVER (ORDER BY {2} {3}) as x_row,  " +
-            //             "  IsNull((select count(*) from Movimientos a LEFT JOIN Expediente e on a.ExpId=e.ExpId " +
-            //             "  LEFT JOIN Equipos f on a.EquipoId=f.EquipoId " +
-            //             "  LEFT JOIN Clientes b on a.ClienteId=b.ClienteId " +
-            //             "  LEFT JOIN Ciudades c on a.CiudadId=c.CiudadId " +
-            //             "  LEFT JOIN Estatus d on a.EstatusId=d.EstatusId WHERE {0}),0)  as TotalRecords,   " +
-            //             "  e.ExpTotal as x_ExpTotal, " +
-            //             "  RTRIM(f.EquipoNum)+N' ('+f.EquipoPlaca+N')' as x_Equipo, " +
-            //             "  (CASE When a.MovTieneRepartos=1 THEN dbo.fn_MovFacturas(a.MovId,a.MovFacturas) ELSE a.MovFacturas END) as x_Facturas " +
-            //             " FROM Movimientos a LEFT JOIN Expediente e on a.ExpId=e.ExpId " +
-            //             "  LEFT JOIN Equipos f on a.EquipoId=f.EquipoId " +
-            //             "  LEFT JOIN Clientes b on a.ClienteId=b.ClienteId " +
-            //             "  LEFT JOIN Ciudades c on a.CiudadId=c.CiudadId " +
-            //             "  INNER JOIN Estatus d on a.EstatusId=d.EstatusId " +
-            //             " WHERE {0}) a  " +
-            //             " WHERE {1} " +
-            //             " ORDER BY x_row";
-
             string sql = "SELECT * FROM dbo.fn_GetViewDistribucion() a " +
                          " where {0} AND {1}" +
                          " ORDER BY x_row";
-
-            //sql = String.Format(sql, where, wherepage, order, direction);
 
             sql = String.Format(sql, wherepage, where);
 
@@ -1062,7 +1037,7 @@ namespace MullerWA.Models
 
             totalRecords = dt.Rows.Count;
 
-            IList<Movs> data = null;
+            IList <Movs> data = null;
 
             if (totalRecords > 0)
             {
