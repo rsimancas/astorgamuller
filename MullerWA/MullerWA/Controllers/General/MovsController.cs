@@ -59,7 +59,7 @@ namespace MullerWA.Controllers
                     IList<Movs> lista;
 
                     lista = repository.GetList(security, tipo, query, sort, page, start, limit, ref totalRecords, ref errMsg);
-                   
+
                     json = new
                     {
                         total = totalRecords,
@@ -196,7 +196,6 @@ namespace MullerWA.Controllers
 
             return json;
         }
-
 
         public object Delete(Movs mov)
         {

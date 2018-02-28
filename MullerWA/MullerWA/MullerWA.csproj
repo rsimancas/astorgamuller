@@ -170,6 +170,8 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Areas\Reports\Controllers\Export2ExcelController.cs" />
+    <Compile Include="Areas\Reports\Controllers\GetExcelController.cs" />
     <Compile Include="Areas\Reports\Controllers\GetPDFController.cs" />
     <Compile Include="Areas\Reports\Controllers\ReciboViajeController.cs" />
     <Compile Include="Areas\Reports\MullerDataSet.cs">
@@ -367,6 +369,7 @@
       <DependentUpon>MullerDataSet.xsd</DependentUpon>
     </Content>
     <Content Include="Areas\Reports\Views\GetPDF\Error.cshtml" />
+    <Content Include="Areas\Reports\ReportDesign\ReporteMovimientos.rdlc" />
     <None Include="Properties\PublishProfiles\publishMuller.pubxml" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />

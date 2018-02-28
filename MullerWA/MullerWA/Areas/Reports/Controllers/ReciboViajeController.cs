@@ -1,18 +1,13 @@
 ﻿using Microsoft.Reporting.WebForms;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using MullerWA.Models;
-using Utilidades;
+using System;
+using System.Collections.Specialized;
 using System.Data;
 using System.Data.SqlClient;
-using System.Collections.Specialized;
-using System.Web.Security;
 using System.IO;
+using System.Linq;
+using System.Web.Mvc;
+using Utilidades;
 
 namespace MullerWA.Areas.Reports.Controllers
 {
@@ -42,6 +37,7 @@ namespace MullerWA.Areas.Reports.Controllers
             int id = Convert.ToInt32(queryValues["id"]);
 
             DataTable dtHeader = GetData(id);
+
             //DataTable dtDetails = GetDetail(id);
             LocalReport lr = new LocalReport();
 

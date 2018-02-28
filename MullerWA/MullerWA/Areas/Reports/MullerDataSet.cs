@@ -1,6 +1,8 @@
-﻿namespace MullerWA.Areas.Reports {
-    
-    
-    public partial class MullerDataSet {
+﻿namespace MullerWA.Areas.Reports
+{
+
+
+    public partial class MullerDataSet
+    {
     }
 }

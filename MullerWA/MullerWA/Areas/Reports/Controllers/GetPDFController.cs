@@ -38,7 +38,8 @@ namespace MullerWA.Areas.Reports.Controllers
             //return RedirectToAction("GetPDF");
 
             queryValues = Request.QueryString;
-            string pdfFile = Path.Combine(Path.GetTempPath(), queryValues["_file"] + ".pdf");
+            //string pdfFile = Path.Combine(Path.GetTempPath(), queryValues["_file"] + ".pdf");
+            string pdfFile = Path.Combine(Request.MapPath("~/App_Data/Temp/"), queryValues["_file"] + ".pdf");
 
             byte[] b = new byte[1024];
 

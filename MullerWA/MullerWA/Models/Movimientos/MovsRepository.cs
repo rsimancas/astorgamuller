@@ -1,13 +1,12 @@
-﻿using System;
+﻿using Helpers;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Configuration;
-using Utilidades;
-using Helpers;
+using System.Linq;
 using System.Reflection;
+using Utilidades;
 
 namespace MullerWA.Models
 {
@@ -42,9 +41,10 @@ namespace MullerWA.Models
 
             if (!string.IsNullOrEmpty(query))
             {
-                string fieldName = "RTRIM(STR(a.MovId))+ISNULL(a.MovChofer,'')+(a.MovViaje)+(ISNULL(e.ExpNumBL,''))+ISNULL(a.MovPlaca,'')+" +
-                    "ISNULL(a.MovCedula,'')+(ISNULL(a.MovContenedor,''))+ISNULL(a.MovTipoContenedor,'')+ISNULL(a.MovOrigen,'')+ISNULL(dbo.fn_MovClientes(a.MovId,b.ClienteNombre),'')+" +
-                    "ISNULL(dbo.fn_MovCiudades(a.MovId,c.CiudadCodigo),'')+ISNULL(d.EstatusNombre,'')+(ISNULL(f.EquipoNum,''))+(ISNULL(f.EquipoPlaca,''))";
+                string fieldName = @"RTRIM(STR(a.MovId)) + ' | ' + ISNULL(a.MovChofer,'') + ' | ' + a.MovViaje + ' | ' + ISNULL(e.ExpNumBL,'') + ' | ' + 
+                                      ISNULL(a.MovPlaca,'') + ' | ' + ISNULL(a.MovCedula,'') + ' | ' + ISNULL(a.MovContenedor,'') + ' | ' + ISNULL(a.MovTipoContenedor,'') + ' | ' + 
+                                      ISNULL(a.MovOrigen,'') + ' | ' + ISNULL(Cli.Clientes,'') + ' | ' + ISNULL(Ciu.Ciudades,'') + ' | ' + ISNULL(d.EstatusNombre,'') + ' | ' +
+                                      ISNULL(f.EquipoNum,'') + ' | ' + ISNULL(f.EquipoPlaca,'')";
                 where += (!string.IsNullOrEmpty(where) ? " and " : "") +
                     EnumExtension.generateLikeWhere(query, fieldName);
             }
@@ -77,48 +77,22 @@ namespace MullerWA.Models
                 }
             }
 
-            //string sql = "SELECT * FROM ( " +
-            //             "SELECT a.*, dbo.fn_MovCiudades(a.MovId,c.CiudadCodigo) as x_Ciudad, " +
-            //             "  d.EstatusNombre as x_Estatus, d.EstatusOrden as x_EstatusOrden, " +
-            //             "  ISNULL(e.ExpNumBL,'') as x_ExpNumBL, " +
-            //             "  (CASE WHEN a.MovTieneRepartos=1 THEN dbo.fn_MovClientes(a.MovId,'') ELSE b.ClienteNombre END) as x_Cliente, " +
-            //             "  ROW_NUMBER() OVER (ORDER BY {2} {3}) as row,  " +
-            //             "  IsNull((select count(*) from Movimientos a LEFT JOIN Expediente e on a.ExpId=e.ExpId " +
-            //             "  LEFT JOIN Equipos f on a.EquipoId=f.EquipoId " +
-            //             "  LEFT JOIN Clientes b on a.ClienteId=b.ClienteId " +
-            //             "  LEFT JOIN Ciudades c on a.CiudadId=c.CiudadId " +
-            //             "  LEFT JOIN Estatus d on a.EstatusId=d.EstatusId WHERE {0}),0)  as TotalRecords,   " +
-            //             "  e.ExpTotal as x_ExpTotal, " +
-            //             "  RTRIM(f.EquipoNum)+N' ('+f.EquipoPlaca+N')' as x_Equipo, " +
-            //             "  (CASE When a.MovTieneRepartos=1 THEN dbo.fn_MovFacturas(a.MovId,a.MovFacturas) ELSE a.MovFacturas END) as x_Facturas " +
-            //             " FROM Movimientos a LEFT JOIN Expediente e on a.ExpId=e.ExpId " +
-            //             "  LEFT JOIN Equipos f on a.EquipoId=f.EquipoId " +
-            //             "  LEFT JOIN Clientes b on a.ClienteId=b.ClienteId " +
-            //             "  LEFT JOIN Ciudades c on a.CiudadId=c.CiudadId " +
-            //             "  INNER JOIN Estatus d on a.EstatusId=d.EstatusId " +
-            //             " WHERE {0}) a  " +
-            //             " WHERE {1} " +
-            //             " ORDER BY row";
-
             string sql = @"WITH qData
                             AS
                             (
-	                            SELECT a.*, ISNULL(Ciu.Ciudades,'') as x_Ciudad, 
-                              d.EstatusNombre as x_Estatus, d.EstatusOrden as x_EstatusOrden, 
-                              ISNULL(e.ExpNumBL,'') as x_ExpNumBL, 
-                              (CASE WHEN a.MovTieneRepartos=1 THEN Cli.Clientes ELSE b.ClienteNombre END) as x_Cliente, 
-                              e.ExpTotal as x_ExpTotal, 
-                              RTRIM(f.EquipoNum)+N' ('+f.EquipoPlaca+N')' as x_Equipo, 
-                              (CASE When a.MovTieneRepartos=1 THEN fac.Facturas ELSE a.MovFacturas END) as x_Facturas 
-                             FROM Movimientos a 
-                              LEFT JOIN Expediente e on a.ExpId=e.ExpId 
-                              LEFT JOIN Equipos f on a.EquipoId=f.EquipoId 
-                              LEFT JOIN Clientes b on a.ClienteId=b.ClienteId 
-                              LEFT JOIN Ciudades c on a.CiudadId=c.CiudadId 
-                              INNER JOIN Estatus d on a.EstatusId=d.EstatusId 
-                              OUTER APPLY (SELECT dbo.fn_MovFacturas(a.MovId,a.MovFacturas) as Facturas) as fac
-                              OUTER APPLY (SELECT dbo.fn_MovClientes(a.MovId,'') as Clientes) as Cli
-                              OUTER APPLY (SELECT dbo.fn_MovCiudades(a.MovId,c.CiudadCodigo) as Ciudades) as Ciu
+	                            SELECT a.*, ISNULL(Ciu.Ciudades,'') as x_Ciudad, d.EstatusNombre as x_Estatus, d.EstatusOrden as x_EstatusOrden, 
+                                    ISNULL(e.ExpNumBL,'') as x_ExpNumBL, (CASE WHEN a.MovTieneRepartos=1 THEN Cli.Clientes ELSE b.ClienteNombre END) as x_Cliente, 
+                                    e.ExpTotal as x_ExpTotal, RTRIM(f.EquipoNum)+N' ('+f.EquipoPlaca+N')' as x_Equipo, 
+                                    (CASE When a.MovTieneRepartos=1 THEN fac.Facturas ELSE a.MovFacturas END) as x_Facturas 
+                                FROM Movimientos a 
+                                    LEFT JOIN Expediente e on a.ExpId=e.ExpId 
+                                    LEFT JOIN Equipos f on a.EquipoId=f.EquipoId 
+                                    LEFT JOIN Clientes b on a.ClienteId=b.ClienteId 
+                                    LEFT JOIN Ciudades c on a.CiudadId=c.CiudadId 
+                                    INNER JOIN Estatus d on a.EstatusId=d.EstatusId 
+                                    OUTER APPLY (SELECT dbo.fn_MovFacturas(a.MovId,a.MovFacturas) as Facturas) as fac
+                                    OUTER APPLY (SELECT dbo.fn_MovClientes(a.MovId,'') as Clientes) as Cli
+                                    OUTER APPLY (SELECT dbo.fn_MovCiudades(a.MovId,c.CiudadCodigo) as Ciudades) as Ciu
                              WHERE {0}
                             )
                             SELECT *
@@ -132,6 +106,7 @@ namespace MullerWA.Models
                             ORDER BY row";
 
             sql = String.Format(sql, where, wherepage, order, direction);
+            
 
             SqlDataAdapter da = new SqlDataAdapter(sql, oConn);
 

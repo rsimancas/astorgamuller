@@ -90,7 +90,8 @@
             {
                 fileName = Path.GetRandomFileName();
                 fileName = Path.ChangeExtension(fileName, ext);
-                fileName = Path.Combine(Path.GetTempPath(), fileName);
+                //fileName = Path.Combine(Path.GetTempPath(), fileName);
+                fileName = Path.Combine(HttpContext.Current.Request.MapPath("~/App_Data/Temp/"), fileName);
 
                 try
                 {
@@ -257,4 +258,3 @@
         }
     }
 }
-
