@@ -1,0 +1,1445 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Vi",
+				"Viewport"
+			],
+			[
+				"_",
+				"_value"
+			],
+			[
+				"new",
+				"newValue"
+			],
+			[
+				"old",
+				"oldValue"
+			],
+			[
+				"Repar",
+				"RepartoFechaEntregado"
+			],
+			[
+				"RE",
+				"RETORNANDO"
+			],
+			[
+				"read",
+				"readOnly"
+			],
+			[
+				"res",
+				"responseJSON"
+			],
+			[
+				"set",
+				"setValue"
+			],
+			[
+				"Rep",
+				"RepartoComentarios"
+			],
+			[
+				"ge",
+				"getFormattedDate"
+			],
+			[
+				"data",
+				"dataUpload"
+			],
+			[
+				"re",
+				"record"
+			],
+			[
+				"edi",
+				"editReparto"
+			],
+			[
+				"Re",
+				"Repartos"
+			],
+			[
+				"rep",
+				"repartoslista"
+			],
+			[
+				"Repa",
+				"RepartoComentarios"
+			],
+			[
+				"Reparto",
+				"RepartoFechaEntregado"
+			],
+			[
+				"repart",
+				"repartoId"
+			],
+			[
+				"reparo",
+				"repartoId"
+			],
+			[
+				"ed",
+				"editform"
+			],
+			[
+				"get",
+				"getCmp"
+			],
+			[
+				"getVa",
+				"getValue"
+			],
+			[
+				"che",
+				"checked"
+			],
+			[
+				"Repart",
+				"RepartoId"
+			],
+			[
+				"getV",
+				"getValue"
+			],
+			[
+				"r",
+				"rbutton"
+			],
+			[
+				"lis",
+				"listeners"
+			],
+			[
+				"loa",
+				"loadRepartos"
+			],
+			[
+				"repa",
+				"repartosArray"
+			],
+			[
+				"radio",
+				"radiofield"
+			],
+			[
+				"repartos",
+				"repartosArray"
+			],
+			[
+				"labe",
+				"labelWidth"
+			],
+			[
+				"x",
+				"x_FechaCompletado"
+			],
+			[
+				"Cu",
+				"currentForm"
+			],
+			[
+				"panel",
+				"panelsLength"
+			],
+			[
+				"pan",
+				"panelsArray"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"cu",
+				"currentForm"
+			],
+			[
+				"cur",
+				"currentId"
+			],
+			[
+				"nav",
+				"navView"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"repar",
+				"repartoslista"
+			],
+			[
+				"vie",
+				"view"
+			],
+			[
+				"store",
+				"storeRepartos"
+			],
+			[
+				"mov",
+				"movId"
+			],
+			[
+				"st",
+				"storeRepartos"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
+				"Mov",
+				"MovId"
+			],
+			[
+				"list",
+				"listaRepartos"
+			],
+			[
+				"R",
+				"Repartos"
+			],
+			[
+				"editre",
+				"editreparto"
+			],
+			[
+				"edit",
+				"editform"
+			],
+			[
+				"x_",
+				"x_Cliente"
+			],
+			[
+				"btn",
+				"btnEntregas"
+			],
+			[
+				"fiel",
+				"fieldCompletado"
+			],
+			[
+				"def",
+				"defaultValue"
+			],
+			[
+				"editrep",
+				"editrepartos"
+			],
+			[
+				"Mo",
+				"MovFechaEntregado"
+			],
+			[
+				"de",
+				"defaultTime"
+			],
+			[
+				"apl",
+				"applyValue"
+			],
+			[
+				"MovFe",
+				"MovFechaSalida"
+			],
+			[
+				"pro",
+				"proxy"
+			],
+			[
+				"ext",
+				"extraParams"
+			],
+			[
+				"pr",
+				"proxy"
+			],
+			[
+				"val",
+				"values"
+			],
+			[
+				"MovUb",
+				"MovUbicacionTransito"
+			],
+			[
+				"va",
+				"values"
+			],
+			[
+				"getVal",
+				"getValues"
+			],
+			[
+				"onClicc",
+				"onClickCameraX"
+			],
+			[
+				"uplo",
+				"uploadImage"
+			],
+			[
+				"form",
+				"formdata"
+			],
+			[
+				"col",
+				"columnWidth"
+			],
+			[
+				"file",
+				"form-file"
+			],
+			[
+				"coi",
+				"columnWidth"
+			],
+			[
+				"fa",
+				"fa-wrench"
+			],
+			[
+				"fa-",
+				"fa-wrench"
+			],
+			[
+				"str",
+				"strong"
+			],
+			[
+				"ret",
+				"returnVal"
+			],
+			[
+				"Est",
+				"EstatusId"
+			],
+			[
+				"Esta",
+				"EstatusNombre"
+			],
+			[
+				"cont",
+				"container"
+			],
+			[
+				"icon",
+				"icon-office"
+			],
+			[
+				"gly",
+				"glyphicon-time"
+			],
+			[
+				"gl",
+				"glyphicon"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"ma",
+				"marquee"
+			],
+			[
+				"parse",
+				"parsed"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"ht",
+				"html"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"ce",
+				"center"
+			],
+			[
+				"cell",
+				"cellsrenderer"
+			],
+			[
+				"x_E",
+				"x_Estatus"
+			],
+			[
+				"Is",
+				"isNullOrEmpty"
+			],
+			[
+				"xEs",
+				"x_EstatusInfo"
+			],
+			[
+				"Es",
+				"EstaInfoId"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"show",
+				"show-option"
+			],
+			[
+				"m",
+				"myMask"
+			],
+			[
+				"sto",
+				"storeEstaInfo"
+			],
+			[
+				"View",
+				"ViewDistribucion"
+			],
+			[
+				"view",
+				"ViewDistribucion"
+			],
+			[
+				"Movi",
+				"Movimientos"
+			],
+			[
+				"min",
+				"minValue"
+			],
+			[
+				"S",
+				"String"
+			],
+			[
+				"isN",
+				"isNullOrEmpty"
+			],
+			[
+				"x_D",
+				"x_DaysBetween"
+			],
+			[
+				"return",
+				"returnVal"
+			],
+			[
+				"of",
+				"offset"
+			],
+			[
+				"to",
+				"toUTCString"
+			],
+			[
+				"row",
+				"rowdata"
+			],
+			[
+				"da",
+				"day"
+			],
+			[
+				"co",
+				"context"
+			],
+			[
+				"date",
+				"dateStr"
+			],
+			[
+				"retur",
+				"returnDate"
+			],
+			[
+				"com",
+				"componentLayoutCounter"
+			],
+			[
+				"la",
+				"layoutView"
+			],
+			[
+				"Ho",
+				"HolidayDay"
+			],
+			[
+				"H",
+				"HolidayMonth"
+			],
+			[
+				"Hol",
+				"HolidayYear"
+			],
+			[
+				"CiudadD",
+				"CiudadDeadLine"
+			],
+			[
+				"rec",
+				"record"
+			],
+			[
+				"Can",
+				"Cantidad"
+			],
+			[
+				"ver",
+				"verticalAlign"
+			],
+			[
+				"item",
+				"itemR"
+			],
+			[
+				"map",
+				"mapGeoJSON"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/view/Main.js",
+			"settings":
+			{
+				"buffer_size": 15587,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/view/Edit.js",
+			"settings":
+			{
+				"buffer_size": 16806,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/model/ViewDistribucion.js",
+			"settings":
+			{
+				"buffer_size": 7291,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/view/RepartosLista.js",
+			"settings":
+			{
+				"buffer_size": 3861,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/view/EditReparto.js",
+			"settings":
+			{
+				"buffer_size": 3300,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/model/Repartos.js",
+			"settings":
+			{
+				"buffer_size": 1224,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "ux/field/DatePicker.js",
+			"settings":
+			{
+				"buffer_size": 12414,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controller/Home.js",
+			"settings":
+			{
+				"buffer_size": 4044,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/view/Logon.js",
+			"settings":
+			{
+				"buffer_size": 4985,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bootstrap.js",
+			"settings":
+			{
+				"buffer_size": 9670,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"fe",
+				"Fetch: File"
+			],
+			[
+				"",
+				"Fetch: Package"
+			],
+			[
+				"fet",
+				"Fetch: Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install ",
+				"Package Control: Install Package"
+			],
+			[
+				"snipp",
+				"Snippet: Bootstrap pagination"
+			],
+			[
+				"snip",
+				"Snippet: Bootstrap toolbar"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Rony/Google Drive/DEV/WEB/Muller/seguridad/app/view/RepartosListaOld.js",
+		"/C/Users/Rony/Google Drive/DEV/WEB/Muller/seguridad/app.js",
+		"/C/Users/Rony/AppData/Roaming/Sublime Text 2/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/Users/Rony/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Rony/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Rony/Google Drive/DEV/WEB/Muller/seguridad/app/view/Logon.js",
+		"/C/Users/Rony/Google Drive/DEV/WEB/Muller/seguridad/ux/field/AutocompleteField.js",
+		"/C/Users/Rony/Google Drive/DEV/WEB/Muller/main_app/upload_file.php",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/app/view/common/Picture.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/ux/CapturePicture.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/visor/scripts/app.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/controller/Home.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/visor/css/app.css",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/visor/index.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/store/EstatusInfo.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/model/EstatusInfo.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/view/Edit.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/view/Main.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/model/ViewDistribucion.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/app/store/ViewDistribucion.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/main_app/security/index.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/common/ToolBar.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/Distribucion.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Holidays.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Holidays.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/HolidaysList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/scripts/app.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/index.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/css/app.css",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/index.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/scripts/behavior.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/scripts/loadMapa.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Movimientos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Ciudades.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/CiudadesList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/form/Toolbar.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/resources/css/app.css",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/publish.bat",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Movimientos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/mapa.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/scripts/mapa.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/security/app.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/security/index.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/DistribucionList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/ImportacionList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/Importacion.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Equipos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/security/app/model/Movimientos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/security/app/view/Main.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/security/app/view/Edit.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/security/app/controller/Home.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/js/behavior.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/EstatusInfo.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/HighCharts-4.0.4/themes/dark-custom.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/jqwidgets-ver3.5.0/styles/jqx.black.css",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/HighCharts-4.0.4/themes/dark-unica-custom.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/HighCharts-4.0.4/themes/dark-unica.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/EstatusList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/FormToolbar.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Clientes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/test.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/controller/Logon.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/Muller.txt",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Equipos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/SecuenciasList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/ExpedienteList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/PromptRepartos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/EstatusInfoList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/EquiposList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/ClientesList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/TabuladorList.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Repartos.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Choferes.js",
+		"/C/Users/Rony/AppData/Roaming/Sublime Text 2/Packages/SyntaxChecker/SyntaxChecker.sublime-settings",
+		"/C/Users/Rony/AppData/Roaming/Sublime Text 2/Packages/JSLint/JSLint.sublime-settings",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app.html",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/FormPaging.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/SearchField.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/form/field/ClearButton.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Clientes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Ciudades.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/common/MainHeader.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/Logon.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/appViewPort.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Secuencias.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Secuencias.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/EstatusInfo.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Tabulador.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/EstatusInformativo.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/EstatusInformativo.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Expediente.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Expediente.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Estados.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Estatus.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Origenes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Paises.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Placas.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Choferes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Estados.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Estatus.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/MovVisor.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Origenes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Paises.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Placas.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Usuarios.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Usuarios.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/form/NumericField.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/controller/Home.js",
+		"/C/Users/Rony/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/Visor.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/controller/Visor.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/sales/FileLineEntry.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Search.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Search.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/ux/InputTextMask.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/visor/jqwidgets/styles/jqx.muller.css",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/Clientes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/sales/FileOrderEntry.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/MovimientosGrid.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/MainHeader.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/css/app.css",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/ToolBar.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/view/ComboClientes.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/model/Users.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/js/sessionsvars.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/js/md5.js",
+		"/C/Users/Rony/SkyDrive/DEV/WEB/Muller/app/store/Users.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"applyValue",
+			"getPicker",
+			"picker.setValue",
+			"responseJSON",
+			"MovFechaEntregado",
+			"navview",
+			"view",
+			"Entregas",
+			"view.editReparto",
+			"edit",
+			"me",
+			"lista",
+			"editReparto",
+			"navRepartos",
+			"listaDist",
+			"loadDist",
+			"editForm",
+			"applyValue",
+			"extraParams",
+			"view",
+			"../resources",
+			"Muller",
+			"me",
+			"FALLIDO",
+			"loadE",
+			"loadVUMe",
+			"loadE",
+			"PROGRAMADO",
+			"FALLIDO",
+			"disabledDays",
+			"data-tooltip",
+			"data-custom-tooltip",
+			"data-tooltip",
+			"data-tooltip\n",
+			"});\n",
+			"glyphicon-remove-circle",
+			"glyphicon-thumbs-down",
+			"-4.0.3",
+			"estatus",
+			"rowdata.x_Estatus",
+			"if(!String.isNullOrEmpty(color)) element.css({ 'color': color });",
+			"bgColor",
+			"if(!String.isNullOrEmpty(color)) element.css({ 'background-color': color });",
+			"\n                    ",
+			", defaultvalue,",
+			"main_app\\",
+			"Muller\\app\\",
+			"get",
+			"view",
+			"MovFechaCompletado",
+			"MovFechaCompletadp",
+			"minValue",
+			"ajax",
+			"loadEquipos2",
+			"+ 4.5",
+			"'}",
+			"Ext.Msg.alert('",
+			",'Cuidado')",
+			"validRecord",
+			"tabulador",
+			"Tabulador",
+			"setChildDisabled",
+			"setDisabled",
+			"disabled",
+			"refreshButtons",
+			"setReadOnlyForAll",
+			"209,7,7",
+			"172,24,24",
+			"250,4,4",
+			"64,19,117",
+			"rida",
+			"é",
+			"í",
+			"ó",
+			"á",
+			"\\u00F3",
+			"hira",
+			"Táchira",
+			"onDelete",
+			"Ext.Msg",
+			"Quest",
+			"onDeleteClick",
+			"bottom",
+			"padding:5px",
+			"F3F0F0",
+			"CAC4C4",
+			"A09999",
+			"row",
+			"col-sm",
+			"col-lg",
+			"col-md",
+			"5px",
+			"                    \n",
+			"data.data[",
+			"name:",
+			"jqxgridMovs",
+			"jqxgrid",
+			"uxformat",
+			"\n        ",
+			"console",
+			"nputItem",
+			"onLoad",
+			"nputItem",
+			"inputItem",
+			"getinputItem",
+			"nputItem",
+			"navigationEn",
+			"toreClientes",
+			"storeTipo",
+			"storeTipod",
+			"getChildBy",
+			"queryMode: 'local'",
+			"href",
+			"beforechange",
+			"'change'",
+			"change",
+			"displayInfo",
+			"displayMsg",
+			"onAddC",
+			"read",
+			"getChildById",
+			"setItem",
+			"searchField",
+			"setIte",
+			"getChildById('",
+			"getChildById(\"",
+			"setItem",
+			"getChildById(\""
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"jsonData",
+			"navView",
+			"Repartos",
+			"view.currentForm",
+			"editReparto",
+			"that",
+			"listaRepartos",
+			"repartosLista",
+			"listaRepartos",
+			"loadLista",
+			"editReparto",
+			"tracking",
+			"../packages",
+			"muller",
+			"data-tooltip",
+			"data-custom-tooltip",
+			"glyphicon-trash",
+			"glyphicon-remove-circle",
+			"-4.2.0",
+			"value",
+			"estatus",
+			"if(!String.isNullOrEmpty(color)) element.css({ 'background-color': color });",
+			"if(!String.isNullOrEmpty(color)) element.css({ 'color': color });",
+			"bgColor\nbgColor\nif(!String.isNullOrEmpty(color)) element.css({ 'color': color });",
+			", defaultHtml,",
+			"",
+			"Muller\\main_app\\app\\",
+			"+ 12",
+			"Ext.Msg.alert('Cuidado','",
+			")",
+			"holidays",
+			"Holidays",
+			"250,4,4",
+			"209,7,7",
+			"172,24,24",
+			"250,4,4",
+			"\\u00E9",
+			"\\u00ED",
+			"\\u00F3",
+			"\\u00E1",
+			"T&aacute;chira",
+			"padding:2px",
+			"000000",
+			"F3F0F0",
+			"CAC4C4",
+			"row-fluid",
+			"col-xs",
+			"col-sm",
+			"col-lg",
+			"0px",
+			"record[",
+			", dataField:",
+			"jqxgrid",
+			"jqxgridMovs",
+			"format",
+			"down('#",
+			"itemId:'",
+			"down('#",
+			"down('#gridmain')",
+			"down('#searchfield')",
+			"gridmain",
+			"down('#gridmain')",
+			"down('#searchfield')",
+			"down('#pagingtoolbar')",
+			"down('#gridclientes')",
+			"FormPagingToolbar",
+			"down('#FormPagingToolbar",
+			"FormPagingToolbar",
+			"app-popup-success-div",
+			"h5",
+			"cliente",
+			"setVisible",
+			"setReadOnly",
+			"onCheckRepartos",
+			"onShow",
+			"onBlurUbicacion",
+			"FormPagingToolbar",
+			"Repartos",
+			"down('#formpagingtoolbar')",
+			"formpagingtoolbar",
+			"storeCiudadesReparto",
+			"fieldCliente",
+			"'Muller.",
+			"storeClientes",
+			"rowEditing",
+			"roeEditing",
+			"if(!String.isNullOrEmpty(field.value)) field.setValue(field.value.toUpperCase());",
+			"fieldStyle:'text-transform:uppercase',",
+			"flex: 1",
+			"gridmain",
+			"form.down(\"field[name=searchField]\")",
+			"",
+			"storeImportacion",
+			"storeDistribucion",
+			"gridestatus",
+			"",
+			"gridmain",
+			"Ciudad",
+			"iudades",
+			"emptyText:",
+			"fieldLabel:",
+			"margin: '0 0 0 5'",
+			"margin: '0 0 5 5'",
+			"//empText:",
+			"//emptyText: 'Seleccionar',",
+			"emptyText:",
+			"Sec",
+			"secuencias",
+			"Secuencias",
+			"SecId",
+			"Secuencias",
+			"SecId",
+			"Secuencias",
+			"storeCondicion",
+			"gridestatusinfo",
+			"EstatusInfo",
+			"tabulador",
+			"Tabulador",
+			"EstatusInformativo",
+			"Tabulador",
+			"quipos",
+			"Equipos",
+			"matchFieldWidth: true,",
+			"distribucion",
+			"Distribucion",
+			"distribucion",
+			"Distribuci",
+			"Distribucion"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/view/Main.js",
+					"settings":
+					{
+						"buffer_size": 15587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1620.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/view/Edit.js",
+					"settings":
+					{
+						"buffer_size": 16806,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 5205.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/model/ViewDistribucion.js",
+					"settings":
+					{
+						"buffer_size": 7291,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1080.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/view/RepartosLista.js",
+					"settings":
+					{
+						"buffer_size": 3861,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1749,
+								1736
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 536.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/view/EditReparto.js",
+					"settings":
+					{
+						"buffer_size": 3300,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1005.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/model/Repartos.js",
+					"settings":
+					{
+						"buffer_size": 1224,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1204,
+								1204
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "ux/field/DatePicker.js",
+					"settings":
+					{
+						"buffer_size": 12414,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8061,
+								8061
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3560.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/controller/Home.js",
+					"settings":
+					{
+						"buffer_size": 4044,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1135,
+								1135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 270.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/view/Logon.js",
+					"settings":
+					{
+						"buffer_size": 4985,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								209,
+								209
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "bootstrap.js",
+					"settings":
+					{
+						"buffer_size": 9670,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1621,
+								1621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1926.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 155.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 204.0,
+	"status_bar_visible": true
+}

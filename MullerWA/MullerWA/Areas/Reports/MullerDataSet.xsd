@@ -1,0 +1,402 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="MullerDataSet" targetNamespace="http://tempuri.org/MullerDataSet.xsd" xmlns:mstns="http://tempuri.org/MullerDataSet.xsd" xmlns="http://tempuri.org/MullerDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="MullerConn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="MullerConn (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.MullerConn.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="fn_GetViewDistribucionTableAdapter" GeneratorDataComponentClassName="fn_GetViewDistribucionTableAdapter" Name="fn_GetViewDistribucion" UserDataComponentName="fn_GetViewDistribucionTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="MullerConn (Web.config)" DbObjectName="MullerWeb.dbo.fn_GetViewDistribucion" DbObjectType="Function" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT a.*, ISNULL(b.Cantidad, a.MovCantidadCauchos) as Cauchos, 
+	ISNULL(b.CiudadCodigo, d.CiudadCodigo) as Ciudad,
+	ISNULL(b.ClienteNombre, c.ClienteNombre) as Cliente   
+FROM dbo.fn_GetViewDistribucion() a 
+LEFT OUTER JOIN (
+	SELECT a.MovId,a.RepartoCantidad as Cantidad, c.CiudadCodigo, b.ClienteNombre
+	FROM Repartos a left join Clientes b on a.ClienteId=b.ClienteId
+	left join Ciudades c on a.CiudadId = c.CiudadId
+	WHERE a.MovId = 1822
+) as b ON a.MovId = b.MovId 
+LEFT JOIN Clientes c ON c.ClienteId = a.ClienteId
+LEFT JOIN Ciudades d ON d.CiudadId = a.CiudadId 
+WHERE a.MovId = 1822</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="MovId" DataSetColumn="MovId" />
+              <Mapping SourceColumn="EstatusId" DataSetColumn="EstatusId" />
+              <Mapping SourceColumn="ExpId" DataSetColumn="ExpId" />
+              <Mapping SourceColumn="ClienteId" DataSetColumn="ClienteId" />
+              <Mapping SourceColumn="CiudadId" DataSetColumn="CiudadId" />
+              <Mapping SourceColumn="EquipoId" DataSetColumn="EquipoId" />
+              <Mapping SourceColumn="TabId" DataSetColumn="TabId" />
+              <Mapping SourceColumn="EstaInfoId" DataSetColumn="EstaInfoId" />
+              <Mapping SourceColumn="MovTipo" DataSetColumn="MovTipo" />
+              <Mapping SourceColumn="MovViaje" DataSetColumn="MovViaje" />
+              <Mapping SourceColumn="MovPlaca" DataSetColumn="MovPlaca" />
+              <Mapping SourceColumn="MovChofer" DataSetColumn="MovChofer" />
+              <Mapping SourceColumn="MovCedula" DataSetColumn="MovCedula" />
+              <Mapping SourceColumn="MovCantidad" DataSetColumn="MovCantidad" />
+              <Mapping SourceColumn="MovContenedor" DataSetColumn="MovContenedor" />
+              <Mapping SourceColumn="MovTipoContenedor" DataSetColumn="MovTipoContenedor" />
+              <Mapping SourceColumn="MovOrigen" DataSetColumn="MovOrigen" />
+              <Mapping SourceColumn="MovElevadora" DataSetColumn="MovElevadora" />
+              <Mapping SourceColumn="MovFechaAsignado" DataSetColumn="MovFechaAsignado" />
+              <Mapping SourceColumn="MovFechaPlantaGY" DataSetColumn="MovFechaPlantaGY" />
+              <Mapping SourceColumn="MovFechaVacio" DataSetColumn="MovFechaVacio" />
+              <Mapping SourceColumn="MovComentario" DataSetColumn="MovComentario" />
+              <Mapping SourceColumn="MovExcedido" DataSetColumn="MovExcedido" />
+              <Mapping SourceColumn="MovFechaExcedido" DataSetColumn="MovFechaExcedido" />
+              <Mapping SourceColumn="MovFechaCreado" DataSetColumn="MovFechaCreado" />
+              <Mapping SourceColumn="MovCreadoPor" DataSetColumn="MovCreadoPor" />
+              <Mapping SourceColumn="MovFechaModificado" DataSetColumn="MovFechaModificado" />
+              <Mapping SourceColumn="MovModificadoPor" DataSetColumn="MovModificadoPor" />
+              <Mapping SourceColumn="MovExpItem" DataSetColumn="MovExpItem" />
+              <Mapping SourceColumn="MovLavadoQuimico" DataSetColumn="MovLavadoQuimico" />
+              <Mapping SourceColumn="MovCondicion" DataSetColumn="MovCondicion" />
+              <Mapping SourceColumn="MovUbicacion" DataSetColumn="MovUbicacion" />
+              <Mapping SourceColumn="MovCantidadCauchos" DataSetColumn="MovCantidadCauchos" />
+              <Mapping SourceColumn="MovCostoFlete" DataSetColumn="MovCostoFlete" />
+              <Mapping SourceColumn="MovMontoEscolta" DataSetColumn="MovMontoEscolta" />
+              <Mapping SourceColumn="MovFechaCarga" DataSetColumn="MovFechaCarga" />
+              <Mapping SourceColumn="MovFechaDescarga" DataSetColumn="MovFechaDescarga" />
+              <Mapping SourceColumn="MovAcarreo" DataSetColumn="MovAcarreo" />
+              <Mapping SourceColumn="MovAcarreoMonto" DataSetColumn="MovAcarreoMonto" />
+              <Mapping SourceColumn="MovFacturas" DataSetColumn="MovFacturas" />
+              <Mapping SourceColumn="MovFechaCompletado" DataSetColumn="MovFechaCompletado" />
+              <Mapping SourceColumn="MovTotalRepartos" DataSetColumn="MovTotalRepartos" />
+              <Mapping SourceColumn="MovTieneRepartos" DataSetColumn="MovTieneRepartos" />
+              <Mapping SourceColumn="MovFechaEstimada" DataSetColumn="MovFechaEstimada" />
+              <Mapping SourceColumn="rowguid" DataSetColumn="rowguid" />
+              <Mapping SourceColumn="MovFechaEntregaFactura" DataSetColumn="MovFechaEntregaFactura" />
+              <Mapping SourceColumn="MovFechaSalida" DataSetColumn="MovFechaSalida" />
+              <Mapping SourceColumn="MovUbicacionTransito" DataSetColumn="MovUbicacionTransito" />
+              <Mapping SourceColumn="MovComentarioInterno" DataSetColumn="MovComentarioInterno" />
+              <Mapping SourceColumn="MovFechaEntregado" DataSetColumn="MovFechaEntregado" />
+              <Mapping SourceColumn="MovMedidaRestoEquipo" DataSetColumn="MovMedidaRestoEquipo" />
+              <Mapping SourceColumn="MovMedidaRestoEquipoUnd" DataSetColumn="MovMedidaRestoEquipoUnd" />
+              <Mapping SourceColumn="MovHoraSalida" DataSetColumn="MovHoraSalida" />
+              <Mapping SourceColumn="x_Ciudad" DataSetColumn="x_Ciudad" />
+              <Mapping SourceColumn="x_Estatus" DataSetColumn="x_Estatus" />
+              <Mapping SourceColumn="x_EstatusOrden" DataSetColumn="x_EstatusOrden" />
+              <Mapping SourceColumn="x_Cliente" DataSetColumn="x_Cliente" />
+              <Mapping SourceColumn="x_order" DataSetColumn="x_order" />
+              <Mapping SourceColumn="x_order2" DataSetColumn="x_order2" />
+              <Mapping SourceColumn="x_Equipo" DataSetColumn="x_Equipo" />
+              <Mapping SourceColumn="x_Facturas" DataSetColumn="x_Facturas" />
+              <Mapping SourceColumn="x_DL" DataSetColumn="x_DL" />
+              <Mapping SourceColumn="x_EstatusInfo" DataSetColumn="x_EstatusInfo" />
+              <Mapping SourceColumn="x_row" DataSetColumn="x_row" />
+              <Mapping SourceColumn="totalRecords" DataSetColumn="totalRecords" />
+              <Mapping SourceColumn="x_DaysBetween" DataSetColumn="x_DaysBetween" />
+              <Mapping SourceColumn="x_FechaCreado" DataSetColumn="x_FechaCreado" />
+              <Mapping SourceColumn="x_FechaModificado" DataSetColumn="x_FechaModificado" />
+              <Mapping SourceColumn="x_FechaSalida" DataSetColumn="x_FechaSalida" />
+              <Mapping SourceColumn="x_DeadLine" DataSetColumn="x_DeadLine" />
+              <Mapping SourceColumn="x_FechaAsignado" DataSetColumn="x_FechaAsignado" />
+              <Mapping SourceColumn="x_FechaEntregaFactura" DataSetColumn="x_FechaEntregaFactura" />
+              <Mapping SourceColumn="x_Attachments" DataSetColumn="x_Attachments" />
+              <Mapping SourceColumn="Cauchos" DataSetColumn="Cauchos" />
+              <Mapping SourceColumn="Ciudad" DataSetColumn="Ciudad" />
+              <Mapping SourceColumn="Cliente" DataSetColumn="Cliente" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="MullerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MullerDataSet" msprop:Generator_UserDSName="MullerDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="fn_GetViewDistribucion" msprop:Generator_TableClassName="fn_GetViewDistribucionDataTable" msprop:Generator_TableVarName="tablefn_GetViewDistribucion" msprop:Generator_TablePropName="fn_GetViewDistribucion" msprop:Generator_RowDeletingName="fn_GetViewDistribucionRowDeleting" msprop:Generator_RowChangingName="fn_GetViewDistribucionRowChanging" msprop:Generator_RowEvHandlerName="fn_GetViewDistribucionRowChangeEventHandler" msprop:Generator_RowDeletedName="fn_GetViewDistribucionRowDeleted" msprop:Generator_UserTableName="fn_GetViewDistribucion" msprop:Generator_RowChangedName="fn_GetViewDistribucionRowChanged" msprop:Generator_RowEvArgName="fn_GetViewDistribucionRowChangeEvent" msprop:Generator_RowClassName="fn_GetViewDistribucionRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MovId" msprop:Generator_ColumnVarNameInTable="columnMovId" msprop:Generator_ColumnPropNameInRow="MovId" msprop:Generator_ColumnPropNameInTable="MovIdColumn" msprop:Generator_UserColumnName="MovId" type="xs:int" minOccurs="0" />
+              <xs:element name="EstatusId" msprop:Generator_ColumnVarNameInTable="columnEstatusId" msprop:Generator_ColumnPropNameInRow="EstatusId" msprop:Generator_ColumnPropNameInTable="EstatusIdColumn" msprop:Generator_UserColumnName="EstatusId" type="xs:int" minOccurs="0" />
+              <xs:element name="ExpId" msprop:Generator_ColumnVarNameInTable="columnExpId" msprop:Generator_ColumnPropNameInRow="ExpId" msprop:Generator_ColumnPropNameInTable="ExpIdColumn" msprop:Generator_UserColumnName="ExpId" type="xs:int" minOccurs="0" />
+              <xs:element name="ClienteId" msprop:Generator_ColumnVarNameInTable="columnClienteId" msprop:Generator_ColumnPropNameInRow="ClienteId" msprop:Generator_ColumnPropNameInTable="ClienteIdColumn" msprop:Generator_UserColumnName="ClienteId" type="xs:int" minOccurs="0" />
+              <xs:element name="CiudadId" msprop:Generator_ColumnVarNameInTable="columnCiudadId" msprop:Generator_ColumnPropNameInRow="CiudadId" msprop:Generator_ColumnPropNameInTable="CiudadIdColumn" msprop:Generator_UserColumnName="CiudadId" type="xs:int" minOccurs="0" />
+              <xs:element name="EquipoId" msprop:Generator_ColumnVarNameInTable="columnEquipoId" msprop:Generator_ColumnPropNameInRow="EquipoId" msprop:Generator_ColumnPropNameInTable="EquipoIdColumn" msprop:Generator_UserColumnName="EquipoId" type="xs:int" minOccurs="0" />
+              <xs:element name="TabId" msprop:Generator_ColumnVarNameInTable="columnTabId" msprop:Generator_ColumnPropNameInRow="TabId" msprop:Generator_ColumnPropNameInTable="TabIdColumn" msprop:Generator_UserColumnName="TabId" type="xs:int" minOccurs="0" />
+              <xs:element name="EstaInfoId" msprop:Generator_ColumnVarNameInTable="columnEstaInfoId" msprop:Generator_ColumnPropNameInRow="EstaInfoId" msprop:Generator_ColumnPropNameInTable="EstaInfoIdColumn" msprop:Generator_UserColumnName="EstaInfoId" type="xs:int" minOccurs="0" />
+              <xs:element name="MovTipo" msprop:Generator_ColumnVarNameInTable="columnMovTipo" msprop:Generator_ColumnPropNameInRow="MovTipo" msprop:Generator_ColumnPropNameInTable="MovTipoColumn" msprop:Generator_UserColumnName="MovTipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovViaje" msprop:Generator_ColumnVarNameInTable="columnMovViaje" msprop:Generator_ColumnPropNameInRow="MovViaje" msprop:Generator_ColumnPropNameInTable="MovViajeColumn" msprop:Generator_UserColumnName="MovViaje" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovPlaca" msprop:Generator_ColumnVarNameInTable="columnMovPlaca" msprop:Generator_ColumnPropNameInRow="MovPlaca" msprop:Generator_ColumnPropNameInTable="MovPlacaColumn" msprop:Generator_UserColumnName="MovPlaca" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovChofer" msprop:Generator_ColumnVarNameInTable="columnMovChofer" msprop:Generator_ColumnPropNameInRow="MovChofer" msprop:Generator_ColumnPropNameInTable="MovChoferColumn" msprop:Generator_UserColumnName="MovChofer" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovCedula" msprop:Generator_ColumnVarNameInTable="columnMovCedula" msprop:Generator_ColumnPropNameInRow="MovCedula" msprop:Generator_ColumnPropNameInTable="MovCedulaColumn" msprop:Generator_UserColumnName="MovCedula" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="12" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovCantidad" msprop:Generator_ColumnVarNameInTable="columnMovCantidad" msprop:Generator_ColumnPropNameInRow="MovCantidad" msprop:Generator_ColumnPropNameInTable="MovCantidadColumn" msprop:Generator_UserColumnName="MovCantidad" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MovContenedor" msprop:Generator_ColumnVarNameInTable="columnMovContenedor" msprop:Generator_ColumnPropNameInRow="MovContenedor" msprop:Generator_ColumnPropNameInTable="MovContenedorColumn" msprop:Generator_UserColumnName="MovContenedor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovTipoContenedor" msprop:Generator_ColumnVarNameInTable="columnMovTipoContenedor" msprop:Generator_ColumnPropNameInRow="MovTipoContenedor" msprop:Generator_ColumnPropNameInTable="MovTipoContenedorColumn" msprop:Generator_UserColumnName="MovTipoContenedor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovOrigen" msprop:Generator_ColumnVarNameInTable="columnMovOrigen" msprop:Generator_ColumnPropNameInRow="MovOrigen" msprop:Generator_ColumnPropNameInTable="MovOrigenColumn" msprop:Generator_UserColumnName="MovOrigen" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovElevadora" msprop:Generator_ColumnVarNameInTable="columnMovElevadora" msprop:Generator_ColumnPropNameInRow="MovElevadora" msprop:Generator_ColumnPropNameInTable="MovElevadoraColumn" msprop:Generator_UserColumnName="MovElevadora" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MovFechaAsignado" msprop:Generator_ColumnVarNameInTable="columnMovFechaAsignado" msprop:Generator_ColumnPropNameInRow="MovFechaAsignado" msprop:Generator_ColumnPropNameInTable="MovFechaAsignadoColumn" msprop:Generator_UserColumnName="MovFechaAsignado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovFechaPlantaGY" msprop:Generator_ColumnVarNameInTable="columnMovFechaPlantaGY" msprop:Generator_ColumnPropNameInRow="MovFechaPlantaGY" msprop:Generator_ColumnPropNameInTable="MovFechaPlantaGYColumn" msprop:Generator_UserColumnName="MovFechaPlantaGY" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovFechaVacio" msprop:Generator_ColumnVarNameInTable="columnMovFechaVacio" msprop:Generator_ColumnPropNameInRow="MovFechaVacio" msprop:Generator_ColumnPropNameInTable="MovFechaVacioColumn" msprop:Generator_UserColumnName="MovFechaVacio" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovComentario" msprop:Generator_ColumnVarNameInTable="columnMovComentario" msprop:Generator_ColumnPropNameInRow="MovComentario" msprop:Generator_ColumnPropNameInTable="MovComentarioColumn" msprop:Generator_UserColumnName="MovComentario" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovExcedido" msprop:Generator_ColumnVarNameInTable="columnMovExcedido" msprop:Generator_ColumnPropNameInRow="MovExcedido" msprop:Generator_ColumnPropNameInTable="MovExcedidoColumn" msprop:Generator_UserColumnName="MovExcedido" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MovFechaExcedido" msprop:Generator_ColumnVarNameInTable="columnMovFechaExcedido" msprop:Generator_ColumnPropNameInRow="MovFechaExcedido" msprop:Generator_ColumnPropNameInTable="MovFechaExcedidoColumn" msprop:Generator_UserColumnName="MovFechaExcedido" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovFechaCreado" msprop:Generator_ColumnVarNameInTable="columnMovFechaCreado" msprop:Generator_ColumnPropNameInRow="MovFechaCreado" msprop:Generator_ColumnPropNameInTable="MovFechaCreadoColumn" msprop:Generator_UserColumnName="MovFechaCreado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovCreadoPor" msprop:Generator_ColumnVarNameInTable="columnMovCreadoPor" msprop:Generator_ColumnPropNameInRow="MovCreadoPor" msprop:Generator_ColumnPropNameInTable="MovCreadoPorColumn" msprop:Generator_UserColumnName="MovCreadoPor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovFechaModificado" msprop:Generator_ColumnVarNameInTable="columnMovFechaModificado" msprop:Generator_ColumnPropNameInRow="MovFechaModificado" msprop:Generator_ColumnPropNameInTable="MovFechaModificadoColumn" msprop:Generator_UserColumnName="MovFechaModificado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovModificadoPor" msprop:Generator_ColumnVarNameInTable="columnMovModificadoPor" msprop:Generator_ColumnPropNameInRow="MovModificadoPor" msprop:Generator_ColumnPropNameInTable="MovModificadoPorColumn" msprop:Generator_UserColumnName="MovModificadoPor" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovExpItem" msprop:Generator_ColumnVarNameInTable="columnMovExpItem" msprop:Generator_ColumnPropNameInRow="MovExpItem" msprop:Generator_ColumnPropNameInTable="MovExpItemColumn" msprop:Generator_UserColumnName="MovExpItem" type="xs:int" minOccurs="0" />
+              <xs:element name="MovLavadoQuimico" msprop:Generator_ColumnVarNameInTable="columnMovLavadoQuimico" msprop:Generator_ColumnPropNameInRow="MovLavadoQuimico" msprop:Generator_ColumnPropNameInTable="MovLavadoQuimicoColumn" msprop:Generator_UserColumnName="MovLavadoQuimico" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MovCondicion" msprop:Generator_ColumnVarNameInTable="columnMovCondicion" msprop:Generator_ColumnPropNameInRow="MovCondicion" msprop:Generator_ColumnPropNameInTable="MovCondicionColumn" msprop:Generator_UserColumnName="MovCondicion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovUbicacion" msprop:Generator_ColumnVarNameInTable="columnMovUbicacion" msprop:Generator_ColumnPropNameInRow="MovUbicacion" msprop:Generator_ColumnPropNameInTable="MovUbicacionColumn" msprop:Generator_UserColumnName="MovUbicacion" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovCantidadCauchos" msprop:Generator_ColumnVarNameInTable="columnMovCantidadCauchos" msprop:Generator_ColumnPropNameInRow="MovCantidadCauchos" msprop:Generator_ColumnPropNameInTable="MovCantidadCauchosColumn" msprop:Generator_UserColumnName="MovCantidadCauchos" type="xs:int" minOccurs="0" />
+              <xs:element name="MovCostoFlete" msprop:Generator_ColumnVarNameInTable="columnMovCostoFlete" msprop:Generator_ColumnPropNameInRow="MovCostoFlete" msprop:Generator_ColumnPropNameInTable="MovCostoFleteColumn" msprop:Generator_UserColumnName="MovCostoFlete" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MovMontoEscolta" msprop:Generator_ColumnVarNameInTable="columnMovMontoEscolta" msprop:Generator_ColumnPropNameInRow="MovMontoEscolta" msprop:Generator_ColumnPropNameInTable="MovMontoEscoltaColumn" msprop:Generator_UserColumnName="MovMontoEscolta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MovFechaCarga" msprop:Generator_ColumnVarNameInTable="columnMovFechaCarga" msprop:Generator_ColumnPropNameInRow="MovFechaCarga" msprop:Generator_ColumnPropNameInTable="MovFechaCargaColumn" msprop:Generator_UserColumnName="MovFechaCarga" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovFechaDescarga" msprop:Generator_ColumnVarNameInTable="columnMovFechaDescarga" msprop:Generator_ColumnPropNameInRow="MovFechaDescarga" msprop:Generator_ColumnPropNameInTable="MovFechaDescargaColumn" msprop:Generator_UserColumnName="MovFechaDescarga" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovAcarreo" msprop:Generator_ColumnVarNameInTable="columnMovAcarreo" msprop:Generator_ColumnPropNameInRow="MovAcarreo" msprop:Generator_ColumnPropNameInTable="MovAcarreoColumn" msprop:Generator_UserColumnName="MovAcarreo" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MovAcarreoMonto" msprop:Generator_ColumnVarNameInTable="columnMovAcarreoMonto" msprop:Generator_ColumnPropNameInRow="MovAcarreoMonto" msprop:Generator_ColumnPropNameInTable="MovAcarreoMontoColumn" msprop:Generator_UserColumnName="MovAcarreoMonto" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MovFacturas" msprop:Generator_ColumnVarNameInTable="columnMovFacturas" msprop:Generator_ColumnPropNameInRow="MovFacturas" msprop:Generator_ColumnPropNameInTable="MovFacturasColumn" msprop:Generator_UserColumnName="MovFacturas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovFechaCompletado" msprop:Generator_ColumnVarNameInTable="columnMovFechaCompletado" msprop:Generator_ColumnPropNameInRow="MovFechaCompletado" msprop:Generator_ColumnPropNameInTable="MovFechaCompletadoColumn" msprop:Generator_UserColumnName="MovFechaCompletado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovTotalRepartos" msprop:Generator_ColumnVarNameInTable="columnMovTotalRepartos" msprop:Generator_ColumnPropNameInRow="MovTotalRepartos" msprop:Generator_ColumnPropNameInTable="MovTotalRepartosColumn" msprop:Generator_UserColumnName="MovTotalRepartos" type="xs:int" minOccurs="0" />
+              <xs:element name="MovTieneRepartos" msprop:Generator_ColumnVarNameInTable="columnMovTieneRepartos" msprop:Generator_ColumnPropNameInRow="MovTieneRepartos" msprop:Generator_ColumnPropNameInTable="MovTieneRepartosColumn" msprop:Generator_UserColumnName="MovTieneRepartos" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MovFechaEstimada" msprop:Generator_ColumnVarNameInTable="columnMovFechaEstimada" msprop:Generator_ColumnPropNameInRow="MovFechaEstimada" msprop:Generator_ColumnPropNameInTable="MovFechaEstimadaColumn" msprop:Generator_UserColumnName="MovFechaEstimada" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="rowguid" msprop:Generator_ColumnVarNameInTable="columnrowguid" msprop:Generator_ColumnPropNameInRow="rowguid" msprop:Generator_ColumnPropNameInTable="rowguidColumn" msprop:Generator_UserColumnName="rowguid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovFechaEntregaFactura" msprop:Generator_ColumnVarNameInTable="columnMovFechaEntregaFactura" msprop:Generator_ColumnPropNameInRow="MovFechaEntregaFactura" msprop:Generator_ColumnPropNameInTable="MovFechaEntregaFacturaColumn" msprop:Generator_UserColumnName="MovFechaEntregaFactura" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovFechaSalida" msprop:Generator_ColumnVarNameInTable="columnMovFechaSalida" msprop:Generator_ColumnPropNameInRow="MovFechaSalida" msprop:Generator_ColumnPropNameInTable="MovFechaSalidaColumn" msprop:Generator_UserColumnName="MovFechaSalida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovUbicacionTransito" msprop:Generator_ColumnVarNameInTable="columnMovUbicacionTransito" msprop:Generator_ColumnPropNameInRow="MovUbicacionTransito" msprop:Generator_ColumnPropNameInTable="MovUbicacionTransitoColumn" msprop:Generator_UserColumnName="MovUbicacionTransito" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovComentarioInterno" msprop:Generator_ColumnVarNameInTable="columnMovComentarioInterno" msprop:Generator_ColumnPropNameInRow="MovComentarioInterno" msprop:Generator_ColumnPropNameInTable="MovComentarioInternoColumn" msprop:Generator_UserColumnName="MovComentarioInterno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovFechaEntregado" msprop:Generator_ColumnVarNameInTable="columnMovFechaEntregado" msprop:Generator_ColumnPropNameInRow="MovFechaEntregado" msprop:Generator_ColumnPropNameInTable="MovFechaEntregadoColumn" msprop:Generator_UserColumnName="MovFechaEntregado" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="MovMedidaRestoEquipo" msprop:Generator_ColumnVarNameInTable="columnMovMedidaRestoEquipo" msprop:Generator_ColumnPropNameInRow="MovMedidaRestoEquipo" msprop:Generator_ColumnPropNameInTable="MovMedidaRestoEquipoColumn" msprop:Generator_UserColumnName="MovMedidaRestoEquipo" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MovMedidaRestoEquipoUnd" msprop:Generator_ColumnVarNameInTable="columnMovMedidaRestoEquipoUnd" msprop:Generator_ColumnPropNameInRow="MovMedidaRestoEquipoUnd" msprop:Generator_ColumnPropNameInTable="MovMedidaRestoEquipoUndColumn" msprop:Generator_UserColumnName="MovMedidaRestoEquipoUnd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MovHoraSalida" msprop:Generator_ColumnVarNameInTable="columnMovHoraSalida" msprop:Generator_ColumnPropNameInRow="MovHoraSalida" msprop:Generator_ColumnPropNameInTable="MovHoraSalidaColumn" msprop:Generator_UserColumnName="MovHoraSalida" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="x_Ciudad" msprop:Generator_ColumnVarNameInTable="columnx_Ciudad" msprop:Generator_ColumnPropNameInRow="x_Ciudad" msprop:Generator_ColumnPropNameInTable="x_CiudadColumn" msprop:Generator_UserColumnName="x_Ciudad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_Estatus" msprop:Generator_ColumnVarNameInTable="columnx_Estatus" msprop:Generator_ColumnPropNameInRow="x_Estatus" msprop:Generator_ColumnPropNameInTable="x_EstatusColumn" msprop:Generator_UserColumnName="x_Estatus" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_EstatusOrden" msprop:Generator_ColumnVarNameInTable="columnx_EstatusOrden" msprop:Generator_ColumnPropNameInRow="x_EstatusOrden" msprop:Generator_ColumnPropNameInTable="x_EstatusOrdenColumn" msprop:Generator_UserColumnName="x_EstatusOrden" type="xs:int" minOccurs="0" />
+              <xs:element name="x_Cliente" msprop:Generator_ColumnVarNameInTable="columnx_Cliente" msprop:Generator_ColumnPropNameInRow="x_Cliente" msprop:Generator_ColumnPropNameInTable="x_ClienteColumn" msprop:Generator_UserColumnName="x_Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4000" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_order" msprop:Generator_ColumnVarNameInTable="columnx_order" msprop:Generator_ColumnPropNameInRow="x_order" msprop:Generator_ColumnPropNameInTable="x_orderColumn" msprop:Generator_UserColumnName="x_order" type="xs:int" minOccurs="0" />
+              <xs:element name="x_order2" msprop:Generator_ColumnVarNameInTable="columnx_order2" msprop:Generator_ColumnPropNameInRow="x_order2" msprop:Generator_ColumnPropNameInTable="x_order2Column" msprop:Generator_UserColumnName="x_order2" type="xs:int" minOccurs="0" />
+              <xs:element name="x_Equipo" msprop:Generator_ColumnVarNameInTable="columnx_Equipo" msprop:Generator_ColumnPropNameInRow="x_Equipo" msprop:Generator_ColumnPropNameInTable="x_EquipoColumn" msprop:Generator_UserColumnName="x_Equipo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="18" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_Facturas" msprop:Generator_ColumnVarNameInTable="columnx_Facturas" msprop:Generator_ColumnPropNameInRow="x_Facturas" msprop:Generator_ColumnPropNameInTable="x_FacturasColumn" msprop:Generator_UserColumnName="x_Facturas" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_DL" msprop:Generator_ColumnVarNameInTable="columnx_DL" msprop:Generator_ColumnPropNameInRow="x_DL" msprop:Generator_ColumnPropNameInTable="x_DLColumn" msprop:Generator_UserColumnName="x_DL" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="x_EstatusInfo" msprop:Generator_ColumnVarNameInTable="columnx_EstatusInfo" msprop:Generator_ColumnPropNameInRow="x_EstatusInfo" msprop:Generator_ColumnPropNameInTable="x_EstatusInfoColumn" msprop:Generator_UserColumnName="x_EstatusInfo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_row" msprop:Generator_ColumnVarNameInTable="columnx_row" msprop:Generator_ColumnPropNameInRow="x_row" msprop:Generator_ColumnPropNameInTable="x_rowColumn" msprop:Generator_UserColumnName="x_row" type="xs:long" minOccurs="0" />
+              <xs:element name="totalRecords" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columntotalRecords" msprop:Generator_ColumnPropNameInRow="totalRecords" msprop:Generator_ColumnPropNameInTable="totalRecordsColumn" msprop:Generator_UserColumnName="totalRecords" type="xs:int" minOccurs="0" />
+              <xs:element name="x_DaysBetween" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_DaysBetween" msprop:Generator_ColumnPropNameInRow="x_DaysBetween" msprop:Generator_ColumnPropNameInTable="x_DaysBetweenColumn" msprop:Generator_UserColumnName="x_DaysBetween" type="xs:int" minOccurs="0" />
+              <xs:element name="x_FechaCreado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_FechaCreado" msprop:Generator_ColumnPropNameInRow="x_FechaCreado" msprop:Generator_ColumnPropNameInTable="x_FechaCreadoColumn" msprop:Generator_UserColumnName="x_FechaCreado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_FechaModificado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_FechaModificado" msprop:Generator_ColumnPropNameInRow="x_FechaModificado" msprop:Generator_ColumnPropNameInTable="x_FechaModificadoColumn" msprop:Generator_UserColumnName="x_FechaModificado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_FechaSalida" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_FechaSalida" msprop:Generator_ColumnPropNameInRow="x_FechaSalida" msprop:Generator_ColumnPropNameInTable="x_FechaSalidaColumn" msprop:Generator_UserColumnName="x_FechaSalida" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="14" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_DeadLine" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_DeadLine" msprop:Generator_ColumnPropNameInRow="x_DeadLine" msprop:Generator_ColumnPropNameInTable="x_DeadLineColumn" msprop:Generator_UserColumnName="x_DeadLine" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_FechaAsignado" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_FechaAsignado" msprop:Generator_ColumnPropNameInRow="x_FechaAsignado" msprop:Generator_ColumnPropNameInTable="x_FechaAsignadoColumn" msprop:Generator_UserColumnName="x_FechaAsignado" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_FechaEntregaFactura" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_FechaEntregaFactura" msprop:Generator_ColumnPropNameInRow="x_FechaEntregaFactura" msprop:Generator_ColumnPropNameInTable="x_FechaEntregaFacturaColumn" msprop:Generator_UserColumnName="x_FechaEntregaFactura" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="x_Attachments" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnx_Attachments" msprop:Generator_ColumnPropNameInRow="x_Attachments" msprop:Generator_ColumnPropNameInTable="x_AttachmentsColumn" msprop:Generator_UserColumnName="x_Attachments" type="xs:int" minOccurs="0" />
+              <xs:element name="Cauchos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCauchos" msprop:Generator_ColumnPropNameInRow="Cauchos" msprop:Generator_ColumnPropNameInTable="CauchosColumn" msprop:Generator_UserColumnName="Cauchos" type="xs:int" minOccurs="0" />
+              <xs:element name="Ciudad" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCiudad" msprop:Generator_ColumnPropNameInRow="Ciudad" msprop:Generator_ColumnPropNameInTable="CiudadColumn" msprop:Generator_UserColumnName="Ciudad" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="3" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Cliente" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCliente" msprop:Generator_ColumnPropNameInRow="Cliente" msprop:Generator_ColumnPropNameInTable="ClienteColumn" msprop:Generator_UserColumnName="Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1">
+      <xs:selector xpath=".//mstns:fn_GetViewDistribucion" />
+      <xs:field xpath="mstns:MovId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

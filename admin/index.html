@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="SHORTCUT ICON" href="../resources/images/favicon.ico" type="image/x-icon" />
+	<title>Admin - Inversiones Astorga Muller</title>
+	<script type="text/javascript" src="../packages/jquery-1.11.0.min.js"></script>
+	<script src="../packages/ext-4.2.1.883/ext-all.js"></script>
+	<script src="../packages/ext-4.2.1.883/ext-theme-neptune.js"></script>
+	<link rel="stylesheet" href="../packages/ext-4.2.1.883/resources/ext-theme-neptune/ext-theme-neptune-all.css">
+	<script src="../packages/ext-4.2.1.883/ext-lang-es.js"></script>
+	<link rel="stylesheet" href="app/resources/css/app.css">
+	<script type="text/javascript">
+        var today = new Date(),
+            href = '?_DC='+ today.getTime();
+
+        $.getScript("scripts/behavior.js"+href, function() { 
+        	$.getScript("../packages/JIC.js"+href, function() { 
+            	$.getScript("app.js"+href);
+            });
+        });
+	</script>
+</head>
+<body></body>
+</html>

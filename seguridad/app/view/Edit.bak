@@ -1,0 +1,175 @@
+Ext.define('MyApp.view.Edit',{
+	extend: 'Ext.form.Panel',
+	alias: 'widget.editform',
+
+	requires: [
+		'Ext.form.FieldSet',
+		'Ext.field.DatePicker'
+	],
+	id: 'editform',
+	config: {
+		//modal: true,
+        hideOnMaskTap: false,
+        //centered: true,
+        width: '100%',
+        height: '100%',
+		items: [
+		{
+            xtype: 'toolbar',
+            ui: 'neutral',
+            docked: 'bottom',
+            scrollable: null,
+            //items: [{iconCls: 'compose'}, {iconCls: 'refresh'}],
+            items: [
+            {
+            	xtype:'button',
+            	ui: 'normal',
+            	text: 'Grabar',
+            	listeners: {
+            		tap: function(btn) {
+            			var me = btn.up('panel');
+            			me.onGrabar();
+            		}
+            	}
+            }
+            ],
+            layout: {
+                pack: 'right',
+                align: 'right'
+            }
+        },
+  		{
+  			xtype: 'fieldset',
+  			//title: 'Datos',
+  			defaults: {
+  				labelWidth: '35%',
+  				style: {
+  					fontSize: '14'
+  				},
+  				labelAlign: 'top'
+  			},
+  			items: [
+			// {
+			// 	xtype: 'datepickerfield',
+			// 	name: 'date',
+			// 	label: 'Fecha',
+			// 	value: new Date(),
+			// 	dateFormat: 'd/m/Y',
+			// 	picker: {
+			// 		yearFrom: 1990,
+			// 		doneText: 'Listo'
+			// 	}
+			// }
+			{
+                xtype: 'hiddenfield',
+                name: 'MovId'
+            },
+            {
+                xtype: 'hiddenfield',
+                name: 'x_Facturas'
+            },
+            {
+                xtype: 'timepickerfield',
+                label: 'Hora de Salida',
+                name: 'MovFechaSalida',
+                defaultTime: null,
+                picker: {
+                	minuteIncrement: 1,
+                	doneButton: 'Listo',
+                	cancelButton: 'Cancelar'
+                }
+            },
+			{
+                xtype: 'selectfield',
+                label: 'Estatus',
+                placeHolder:  'Seleccionar',
+                name: 'EstatusId',
+                usePicker: true,
+                defaultPhonePickerConfig : {
+		            doneButton : 'Listo',
+		            cancelButton : 'Cancelar'
+		        }
+            },
+			{
+                xtype: 'selectfield',
+                label: 'Estatus Info.',
+                placeHolder:  'Seleccionar',
+                name: 'EstaInfoId',
+                usePicker: true,
+                defaultPhonePickerConfig : {
+		            doneButton : 'Listo',
+		            cancelButton : 'Cancelar'
+		        }
+                //valueField: 'EstaInfoId',
+                //displayField: 'EstaInfoNombre'
+            },
+            {
+                xtype: 'textareafield',
+                label: 'Comentarios',
+                maxRows: 4,
+                name: 'MovComentario'
+            }
+			]
+		}
+		]
+	},
+
+	onGrabar: function() {
+		var me = this,
+			datos = me.getValues();
+
+		datos["x_UserUpdate"] = Ext.JSON.decode(Ext.util.Cookies.get("AppCurrentUser")).UsuarioId;
+
+        if(!me.validDatos(datos)) return;
+
+		Ext.Viewport.setMasked({
+            xtype: 'loadmask',
+            message: 'Espere por favor...'
+        });
+
+		Ext.Ajax.request({
+			method:'POST',
+			url:'../wa/api/Seguridad',
+			jsonData: Ext.encode(datos),
+			headers: {
+				'Authorization-Token': Ext.util.Cookies.get('AppAuth')
+			},
+			callback: function(request) {
+				Ext.Viewport.setMasked(false);
+				var navview = me.up('navigationview'),
+					btn = navview.down('button'),
+					lista = navview.down('#listaDist'), 
+					record = lista.getStore().getAt(navview.lastSelectedIndex),
+					estaInfoNombre = me.down('field[name=EstaInfoId]').getRecord(),
+                    estatusNombre = me.down('field[name=EstatusId]').getRecord();
+
+				estaInfoNombre = (estaInfoNombre) ? estaInfoNombre.data.text : null;
+                estatusNombre = (estatusNombre) ? estatusNombre.data.text : null;
+
+				record.set('MovComentario', datos.MovComentario);
+				record.set('EstaInfoId', datos.EstaInfoId);
+				record.set('x_EstatusInfo', estaInfoNombre);
+                record.set('x_Estatus', estatusNombre);
+
+				btn.fireEvent('tap', btn);
+				//console.log();
+			}
+		});
+	},
+
+    validDatos: function(datos) {
+        var me = this,
+            navView = me.up('navigationview'),
+            lista = navView.down('#listaDist'),
+            record = lista.getStore().getAt(navView.lastSelectedIndex);
+
+        if(String.isNullOrEmpty(record.get('x_Facturas'))) {
+            Ext.Msg.alert('Validación', 'No se han cargado facturas', Ext.emptyFn);
+            return false;
+        }
+
+        console.log(datos, record);
+
+        return false;
+    }
+});

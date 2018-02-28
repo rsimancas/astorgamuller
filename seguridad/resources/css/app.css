@@ -1,0 +1,44 @@
+/**
+ * Emulating <blink> using WebKit CSS3 animation        
+ *   This code is part of John Smith's blog
+ *
+ * Copyright 2010 by John Smith, All Rights Reserved
+ *
+ * @link   http://www.john-smith.me/emulating--lt-blink-gt--using-webkit-css3-animation
+ * @date   18th October 2010 at 11:01 p.m.
+ * @author John Smith
+ */
+@-webkit-keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
+        @keyframes blinker { from {opacity:1.0;} to {opacity:0.0;} }
+
+.blink {
+   text-decoration:blink;
+
+  -webkit-animation-name:blinker;
+          animation-name:blinker;  
+  -webkit-animation-iteration-count:infinite;  
+          animation-iteration-count:infinite;  
+  -webkit-animation-timing-function:cubic-bezier(1.0,0,0,1.0);
+          animation-timing-function:cubic-bezier(1.0,0,0,1.0);
+  -webkit-animation-duration:3s; 
+          animation-duration:3s; 
+}
+
+
+.estatus-alerta {
+    float: center;
+    /*font-size: 13px;
+    text-align: center;*/
+    color:red;
+    font-weight: bold;
+    text-decoration:blink;
+
+      -webkit-animation-name:blinker;
+              animation-name:blinker;  
+      -webkit-animation-iteration-count:infinite;  
+              animation-iteration-count:infinite;  
+      -webkit-animation-timing-function:cubic-bezier(1.0,0,0,1.0);
+              animation-timing-function:cubic-bezier(1.0,0,0,1.0);
+      -webkit-animation-duration:1.5s; 
+              animation-duration:1.5s;
+}
