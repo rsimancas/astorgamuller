@@ -14,7 +14,7 @@ namespace MullerWA.Models
         Movs Add(Movs mov, ref string errMsg);
         bool Remove(Movs mov, ref string errMsg);
         Movs Update(Movs mov, ref string errMsg);
-        IList<Movs> GetList(int security, string tipo, string query, Sort sort, int page, int start, int limit, ref int totalRecords, ref string errorMsg);
+        IList<Movs> GetList(string startDate, string endDate, int security, string tipo, string query, Sort sort, int page, int start, int limit, ref int totalRecords, ref string errorMsg);
         IList<Chofer> GetChoferes(string query, int page, int start, int limit, ref int totalRecords, ref string errMsg);
         IList<Placa> GetPlacas(string query, int page, int start, int limit, ref int totalRecords, ref string errMsg);
         IList<Origen> GetOrigenes(string query, int page, int start, int limit, ref int totalRecords, ref string errMsg);

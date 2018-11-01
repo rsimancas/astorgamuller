@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Globalization;
 using System.Linq;
 using System.Reflection;
 using Utilidades;
@@ -13,7 +14,7 @@ namespace MullerWA.Models
     public class MovsRepository : IMovsRepository
     {
         #region General
-        public IList<Movs> GetList(int security, string tipo, string query, Sort sort, int page, int start, int limit, ref int totalRecords, ref string errMsg)
+        public IList<Movs> GetList(string startDate, string endDate, int security, string tipo, string query, Sort sort, int page, int start, int limit, ref int totalRecords, ref string errMsg)
         {
             limit = limit + start;
 
@@ -31,6 +32,17 @@ namespace MullerWA.Models
 
             string wherepage = (page != 0) ? String.Format("row>{0} and row<={1} ", start, limit) : "1=1";
             string where = "1=1";
+
+            if (!string.IsNullOrEmpty(startDate))
+            {
+                DateTime date = DateTime.ParseExact(startDate, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
+                where += string.Format(" AND CAST(MovFechaAsignado as Date) >= '{0}'", date.ToString("yyyy/MM/dd"));
+            }
+            if (!string.IsNullOrEmpty(endDate))
+            {
+                DateTime date = DateTime.ParseExact(endDate, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.AdjustToUniversal);
+                where += string.Format(" AND CAST(MovFechaAsignado as Date) <= '{0}'", date.ToString("yyyy/MM/dd"));
+            }
 
             where += !string.IsNullOrWhiteSpace(tipo) ? " and a.MovTipo='" + tipo + "'" : "";
 
@@ -120,7 +132,7 @@ namespace MullerWA.Models
             {
                 LogManager.Write("ERROR:" + Environment.NewLine + "\tMETHOD = " + this.GetType().FullName + "." + MethodBase.GetCurrentMethod().Name + Environment.NewLine + "\tMESSAGE = " + ex.Message);
                 errMsg = ex.Message;
-                return null;
+                return new List<Movs>();
             }
 
             DataTable dt;
@@ -128,7 +140,7 @@ namespace MullerWA.Models
 
             totalRecords = dt.Rows.Count;
 
-            IList<Movs> data = null;
+            IList<Movs> data = new List<Movs>();
 
             if (totalRecords > 0)
             {

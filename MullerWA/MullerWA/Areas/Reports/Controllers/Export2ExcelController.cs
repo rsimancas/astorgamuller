@@ -45,6 +45,9 @@ namespace MullerWA.Areas.Reports.Controllers
 
                 string query = !string.IsNullOrWhiteSpace(queryValues["query"]) ? queryValues["query"] : "";
 
+                string startDate = queryValues["startDate"];
+                string endDate = queryValues["endDate"];
+
                 #region Configuramos el orden de la consulta si se obtuvo como parametro
                 string strOrder = !string.IsNullOrWhiteSpace(queryValues["sort"]) ? queryValues["sort"] : "";
                 strOrder = strOrder.Replace('[', ' ');
@@ -65,7 +68,7 @@ namespace MullerWA.Areas.Reports.Controllers
                 int totalRecords = 0;
                 string errMsg = "";
 
-                var lista = movsRepository.GetList(security, tipo, query, sort, page, start, limit, ref totalRecords, ref errMsg);
+                var lista = movsRepository.GetList(startDate, endDate, security, tipo, query, sort, page, start, limit, ref totalRecords, ref errMsg);
                 
                 LocalReport lr = new LocalReport();
 

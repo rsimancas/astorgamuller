@@ -228,6 +228,7 @@ Ext.application({
         'Ext.ux.form.Toolbar',
         'Ext.ux.form.NumericField',
         'Ext.ux.CapturePicture',
+        'Overrides.form.field.Date',
         'Overrides.form.field.Base',
         'Overrides.form.ComboBox',
         'Overrides.view.Table',

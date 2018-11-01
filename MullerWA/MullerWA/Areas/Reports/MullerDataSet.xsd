@@ -118,7 +118,7 @@ WHERE a.MovId = 1822</CommandText>
   <xs:element name="MullerDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="MullerDataSet" msprop:Generator_UserDSName="MullerDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="fn_GetViewDistribucion" msprop:Generator_TableClassName="fn_GetViewDistribucionDataTable" msprop:Generator_TableVarName="tablefn_GetViewDistribucion" msprop:Generator_RowChangedName="fn_GetViewDistribucionRowChanged" msprop:Generator_TablePropName="fn_GetViewDistribucion" msprop:Generator_RowDeletingName="fn_GetViewDistribucionRowDeleting" msprop:Generator_RowChangingName="fn_GetViewDistribucionRowChanging" msprop:Generator_RowEvHandlerName="fn_GetViewDistribucionRowChangeEventHandler" msprop:Generator_RowDeletedName="fn_GetViewDistribucionRowDeleted" msprop:Generator_RowClassName="fn_GetViewDistribucionRow" msprop:Generator_UserTableName="fn_GetViewDistribucion" msprop:Generator_RowEvArgName="fn_GetViewDistribucionRowChangeEvent">
+        <xs:element name="fn_GetViewDistribucion" msprop:Generator_TableClassName="fn_GetViewDistribucionDataTable" msprop:Generator_TableVarName="tablefn_GetViewDistribucion" msprop:Generator_TablePropName="fn_GetViewDistribucion" msprop:Generator_RowDeletingName="fn_GetViewDistribucionRowDeleting" msprop:Generator_RowChangingName="fn_GetViewDistribucionRowChanging" msprop:Generator_RowEvHandlerName="fn_GetViewDistribucionRowChangeEventHandler" msprop:Generator_RowDeletedName="fn_GetViewDistribucionRowDeleted" msprop:Generator_UserTableName="fn_GetViewDistribucion" msprop:Generator_RowChangedName="fn_GetViewDistribucionRowChanged" msprop:Generator_RowEvArgName="fn_GetViewDistribucionRowChangeEvent" msprop:Generator_RowClassName="fn_GetViewDistribucionRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MovId" msprop:Generator_ColumnVarNameInTable="columnMovId" msprop:Generator_ColumnPropNameInRow="MovId" msprop:Generator_ColumnPropNameInTable="MovIdColumn" msprop:Generator_UserColumnName="MovId" type="xs:int" minOccurs="0" />
@@ -392,7 +392,7 @@ WHERE a.MovId = 1822</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="dsReporteMovimientos" msprop:Generator_TableClassName="dsReporteMovimientosDataTable" msprop:Generator_TableVarName="tabledsReporteMovimientos" msprop:Generator_TablePropName="dsReporteMovimientos" msprop:Generator_RowDeletingName="dsReporteMovimientosRowDeleting" msprop:Generator_RowChangingName="dsReporteMovimientosRowChanging" msprop:Generator_RowEvHandlerName="dsReporteMovimientosRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteMovimientosRowDeleted" msprop:Generator_UserTableName="dsReporteMovimientos" msprop:Generator_RowChangedName="dsReporteMovimientosRowChanged" msprop:Generator_RowEvArgName="dsReporteMovimientosRowChangeEvent" msprop:Generator_RowClassName="dsReporteMovimientosRow">
+        <xs:element name="dsReporteMovimientos" msprop:Generator_TableClassName="dsReporteMovimientosDataTable" msprop:Generator_TableVarName="tabledsReporteMovimientos" msprop:Generator_RowChangedName="dsReporteMovimientosRowChanged" msprop:Generator_TablePropName="dsReporteMovimientos" msprop:Generator_RowDeletingName="dsReporteMovimientosRowDeleting" msprop:Generator_RowChangingName="dsReporteMovimientosRowChanging" msprop:Generator_RowEvHandlerName="dsReporteMovimientosRowChangeEventHandler" msprop:Generator_RowDeletedName="dsReporteMovimientosRowDeleted" msprop:Generator_RowClassName="dsReporteMovimientosRow" msprop:Generator_UserTableName="dsReporteMovimientos" msprop:Generator_RowEvArgName="dsReporteMovimientosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="MovId" msprop:Generator_ColumnVarNameInTable="columnMovId" msprop:Generator_ColumnPropNameInRow="MovId" msprop:Generator_ColumnPropNameInTable="MovIdColumn" msprop:Generator_UserColumnName="MovId" type="xs:int" minOccurs="0" />
@@ -663,6 +663,7 @@ WHERE a.MovId = 1822</CommandText>
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="MovComentarioLogistica" msprop:Generator_ColumnVarNameInTable="columnMovComentarioLogistica" msprop:Generator_ColumnPropNameInRow="MovComentarioLogistica" msprop:Generator_ColumnPropNameInTable="MovComentarioLogisticaColumn" msprop:Generator_UserColumnName="MovComentarioLogistica" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

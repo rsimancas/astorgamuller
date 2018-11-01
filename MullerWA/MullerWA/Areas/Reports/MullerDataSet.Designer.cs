@@ -1886,6 +1886,8 @@ namespace MullerWA.Areas.Reports {
             
             private global::System.Data.DataColumn columnCliente;
             
+            private global::System.Data.DataColumn columnMovComentarioLogistica;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public dsReporteMovimientosDataTable() {
@@ -2529,6 +2531,14 @@ namespace MullerWA.Areas.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn MovComentarioLogisticaColumn {
+                get {
+                    return this.columnMovComentarioLogistica;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2640,7 +2650,8 @@ namespace MullerWA.Areas.Reports {
                         int x_Attachments, 
                         int Cauchos, 
                         string Ciudad, 
-                        string Cliente) {
+                        string Cliente, 
+                        string MovComentarioLogistica) {
                 dsReporteMovimientosRow rowdsReporteMovimientosRow = ((dsReporteMovimientosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MovId,
@@ -2718,7 +2729,8 @@ namespace MullerWA.Areas.Reports {
                         x_Attachments,
                         Cauchos,
                         Ciudad,
-                        Cliente};
+                        Cliente,
+                        MovComentarioLogistica};
                 rowdsReporteMovimientosRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowdsReporteMovimientosRow);
                 return rowdsReporteMovimientosRow;
@@ -2817,6 +2829,7 @@ namespace MullerWA.Areas.Reports {
                 this.columnCauchos = base.Columns["Cauchos"];
                 this.columnCiudad = base.Columns["Ciudad"];
                 this.columnCliente = base.Columns["Cliente"];
+                this.columnMovComentarioLogistica = base.Columns["MovComentarioLogistica"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2974,6 +2987,8 @@ namespace MullerWA.Areas.Reports {
                 base.Columns.Add(this.columnCiudad);
                 this.columnCliente = new global::System.Data.DataColumn("Cliente", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCliente);
+                this.columnMovComentarioLogistica = new global::System.Data.DataColumn("MovComentarioLogistica", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMovComentarioLogistica);
                 this.columnMovTipo.MaxLength = 1;
                 this.columnMovViaje.MaxLength = 12;
                 this.columnMovPlaca.MaxLength = 12;
@@ -6581,6 +6596,23 @@ namespace MullerWA.Areas.Reports {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string MovComentarioLogistica {
+                get {
+                    try {
+                        return ((string)(this[this.tabledsReporteMovimientos.MovComentarioLogisticaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'MovComentarioLogistica\' in table \'dsReporteMovimientos\' is " +
+                                "DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabledsReporteMovimientos.MovComentarioLogisticaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsMovIdNull() {
                 return this.IsNull(this.tabledsReporteMovimientos.MovIdColumn);
             }
@@ -7489,6 +7521,18 @@ namespace MullerWA.Areas.Reports {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetClienteNull() {
                 this[this.tabledsReporteMovimientos.ClienteColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool IsMovComentarioLogisticaNull() {
+                return this.IsNull(this.tabledsReporteMovimientos.MovComentarioLogisticaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void SetMovComentarioLogisticaNull() {
+                this[this.tabledsReporteMovimientos.MovComentarioLogisticaColumn] = global::System.Convert.DBNull;
             }
         }
         

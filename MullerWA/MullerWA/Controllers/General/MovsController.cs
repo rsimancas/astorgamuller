@@ -31,6 +31,9 @@ namespace MullerWA.Controllers
 
             string query = !string.IsNullOrWhiteSpace(queryValues["query"]) ? queryValues["query"] : "";
 
+            string startDate = queryValues["startDate"];
+            string endDate = queryValues["endDate"];
+
             #region Configuramos el orden de la consulta si se obtuvo como parametro
             string strOrder = !string.IsNullOrWhiteSpace(queryValues["sort"]) ? queryValues["sort"] : "";
             strOrder = strOrder.Replace('[', ' ');
@@ -58,7 +61,7 @@ namespace MullerWA.Controllers
                     object json;
                     IList<Movs> lista;
 
-                    lista = repository.GetList(security, tipo, query, sort, page, start, limit, ref totalRecords, ref errMsg);
+                    lista = repository.GetList(startDate, endDate, security, tipo, query, sort, page, start, limit, ref totalRecords, ref errMsg);
 
                     json = new
                     {

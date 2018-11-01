@@ -6,6 +6,8 @@ Ext.define('Muller.view.DistribucionList', {
 
     initComponent: function () {
         var me = this;
+        var endDate = new Date(),
+            startDate = moment().add(-30, 'd').toDate();
 
         Ext.require([
             //'Ext.toolbar.Paging',
@@ -74,7 +76,7 @@ Ext.define('Muller.view.DistribucionList', {
                         {
                             xtype: 'gridcolumn',
                             width: 200,
-                            dataIndex: 'MovComentariosLogistica',
+                            dataIndex: 'MovComentarioLogistica',
                             text: 'Observaciones'
                         },
                         {
@@ -114,7 +116,7 @@ Ext.define('Muller.view.DistribucionList', {
                             tdCls: 'x-change-cell',
                             align: 'center'
                         },
-						{
+                        {
                             xtype: 'actioncolumn',
                             width: 25,
                             items: [
@@ -172,7 +174,7 @@ Ext.define('Muller.view.DistribucionList', {
                                 name: 'searchField',
                                 itemId: 'searchfield',
                                 //fieldLabel: 'Buscar',
-                                width: '50%',
+                                width: '25%',
                                 enableKeyEvents: true,
                                 emptyText: 'Escriba y pulse enter para buscar',
                                 triggerCls: 'x-form-search-trigger',
@@ -196,6 +198,107 @@ Ext.define('Muller.view.DistribucionList', {
                                         if (String.isNullOrEmpty(valor)) {
                                             me.onSearchFieldChange();
                                         }
+                                    }
+                                }
+                            },
+                            // Date Range
+                            {
+                                labelAlign: 'left',
+                                labelWidth: 45,
+                                //columnWidth: 0.25,
+                                xtype: 'combo',
+                                displayField: 'name',
+                                valueField: 'id',
+                                fieldLabel: 'Asignado',
+                                name: 'DateRange',
+                                queryMode: 'local',
+                                typeAhead: true,
+                                minChars: 1,
+                                forceSelection: true,
+                                enableKeyEvents: true,
+                                autoSelect: true,
+                                selectOnFocus: true,
+                                value: 1,
+                                allowBlank: false,
+                                store: {
+                                    fields: ['id', 'name'],
+                                    data: [{
+                                        'id': 1,
+                                        'name': "Últimos 30 días"
+                                    }, {
+                                        'id': 2,
+                                        'name': "Esta semana"
+                                    }, {
+                                        'id': 3,
+                                        'name': "La semana pasada"
+                                    }, {
+                                        'id': 4,
+                                        'name': "Este més"
+                                    }, {
+                                        'id': 5,
+                                        'name': "Mes pasado"
+                                    }, {
+                                        'id': 6,
+                                        'name': "Este trimestre"
+                                    }, {
+                                        'id': 7,
+                                        'name': "Trimestre pasado"
+                                    }, {
+                                        'id': 8,
+                                        'name': "Este año"
+                                    }, {
+                                        'id': 9,
+                                        'name': "Año pasado"
+                                    }, {
+                                        'id': 10,
+                                        'name': "Personalizado"
+                                    },{
+                                        'id': 11,
+                                        'name': "Todos los registros"
+                                    }]
+                                },
+                                listeners: {
+                                    select: {
+                                        fn: me.onSelectRangeDate,
+                                        scope: me
+                                    }
+                                }
+                            },
+                            // Start Date
+                            {
+                                margin: '0 0 0 5',
+                                xtype: 'datefield',
+                                //columnWidth: 0.25,
+                                fieldLabel: 'Desde',
+                                labelAlign: 'left',
+                                labelWidth: 35,
+                                name: 'StartDate',
+                                allowBlank: false,
+                                value: startDate,
+                                disabled: true,
+                                listeners: {
+                                    select: function(field) {
+                                        var me = field.up("form");
+                                        me.refreshGrids();
+                                    }
+                                }
+                            },
+                            // End Date
+                            {
+                                margin: '0 0 0 5',
+                                xtype: 'datefield',
+                                //columnWidth: 0.25,
+                                fieldLabel: 'Hasta',
+                                labelAlign: 'left',
+                                labelWidth: 35,
+                                name: 'EndDate',
+                                allowBlank: false,
+                                value: endDate,
+                                disabled: true,
+                                listeners: {
+                                    select: function(field) {
+                                        var me = field.up("form");
+                                        me.refreshGrids();
                                     }
                                 }
                             },
@@ -575,6 +678,96 @@ Ext.define('Muller.view.DistribucionList', {
                 window.open('../wa/Reports/GetExcel?_file=' + text, 'Reporte Movimientos');
                 Ext.Msg.hide();
             }
+        });
+    },
+
+    onSelectRangeDate: function(combo, records, eOpts) {
+        var me = this,
+            startDate = me.down("field[name=StartDate]").getValue(),
+            endDate = me.down('field[name=EndDate]').getValue(),
+            fieldStart = me.down("field[name=StartDate]"),
+            fieldEnd = me.down('field[name=EndDate]');
+
+        fieldStart.setDisabled(true);
+        fieldEnd.setDisabled(true);
+
+        var params = {
+            page: 0,
+            limit: 0,
+            start: 0
+        };
+
+        switch (combo.getValue()) {
+            case 1: // Last 30 Days
+                endDate = new Date();
+                startDate = moment().add(-30, 'd').toDate();
+                break;
+            case 2: // This Week
+                startDate = moment().startOf('week').add(1, 'd').toDate();
+                endDate = new Date();
+                break;
+            case 3: // Last Week
+                startDate = moment().add(-1, 'week').startOf('week').add(1, 'd').toDate();
+                endDate = moment().add(-1, 'week').endOf('week').add(1, 'd').toDate();
+                break;
+            case 4: // This Month
+                startDate = moment().startOf('month').toDate();
+                endDate = new Date();
+                break;
+            case 5: // Last Month
+                startDate = moment().add(-1, 'month').startOf('month').toDate();
+                endDate = moment().add(-1, 'month').endOf('month').toDate();
+                break;
+            case 6: // This Quarter
+                startDate = moment().startOf('quarter').toDate();
+                endDate = new Date();
+                break;
+            case 7: // Previous Quarter
+                startDate = moment().add(-1, 'quarter').startOf('quarter').toDate();
+                endDate = moment().add(-1, 'quarter').endOf('quarter').toDate();
+                break;
+            case 8: // Year to Date
+                startDate = moment().startOf('year').toDate();
+                endDate = new Date();
+                break;
+            case 9: // Previous Year
+                startDate = moment().add(-1, 'year').startOf('year').toDate();
+                endDate = moment().add(-1, 'year').endOf('year').toDate();
+                break;
+            case 10: //Custom
+                fieldStart.setDisabled(false);
+                fieldEnd.setDisabled(false);
+                break;
+            case 11: //All Records
+                endDate = new Date();
+                startDate = null;
+                break;
+        }
+
+        fieldStart.setValue(startDate);
+        fieldEnd.setValue(endDate);
+
+        me.refreshGrids();
+    },
+
+    refreshGrids: function() {
+        var me = this,
+            combo = me.down("field[name=DateRange]"),
+            startDate = me.down("field[name=StartDate]").getValue(),
+            endDate = me.down("field[name=EndDate]").getValue();
+
+        var params = {
+            page: 0,
+            limit: 0,
+            start: 0
+        };
+
+        params.startDate = startDate;
+        params.endDate = endDate;
+
+        var grid = me.down("#gridmain");
+        grid.store.reload({
+            params: params
         });
     },
 });
